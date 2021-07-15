@@ -12,7 +12,7 @@ const StoreItem = ({ store, navigation }) => {
         source={{ uri: store.image }}
         style={{ width: 150, height: 150 }}
       />
-      <Text> {store.name}</Text>
+      <Text style={{ fontSize: 25, fontWeight: "600" }}> {store.name}</Text>
     </List.Item>
   );
 };

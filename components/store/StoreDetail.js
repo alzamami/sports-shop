@@ -33,10 +33,10 @@ const StoreDetail = ({ route }) => {
         source={{ uri: store.image }}
         style={{ width: 150, height: 150 }}
       />
-      <Text> {store.name}</Text>
-      <List style={styles.list}>
+      <Text style={{ fontSize: 25, fontWeight: "600" }}> {store.name}</Text>
+      <List.Item style={styles.list}>
         <ProductList products={products} />
-      </List>
+      </List.Item>
     </View>
   );
 };
