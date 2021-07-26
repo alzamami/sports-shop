@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Center, NativeBaseProvider } from "native-base";
-import { Alert } from "react-native";
 
 export default function Home({ navigation }) {
   return (

@@ -28,16 +28,16 @@ const StoreDetail = ({ route }) => {
     productStore.getProductById(product.id)
   );
   return (
-    <View style={styles.content}>
-      <Image
-        source={{ uri: store.image }}
-        style={{ width: 150, height: 150 }}
-      />
-      <Text style={{ fontSize: 25, fontWeight: "600" }}> {store.name}</Text>
-      <List.Item style={styles.list}>
-        <ProductList products={products} />
-      </List.Item>
-    </View>
+    <>
+      <View style={styles.content}>
+        <Image
+          source={{ uri: store.image }}
+          style={{ width: 150, height: 150 }}
+        />
+        <Text style={{ fontSize: 25, fontWeight: "600" }}> {store.name}</Text>
+      </View>
+      <ProductList products={products} />
+    </>
   );
 };
 

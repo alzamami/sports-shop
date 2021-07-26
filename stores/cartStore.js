@@ -19,6 +19,16 @@ class CartStore {
     else this.items.push(newItem);
     await AsyncStorage.setItem("cart", JSON.stringify(this.items));
   };
+  deleteItem = async (itemId) => {
+    this.items = this.items.filter((item) => item.productId !== itemId);
+    await AsyncStorage.setItem("cart", JSON.stringify(this.items));
+  };
+
+  checkout = async () => {
+    this.items = [];
+    await AsyncStorage.removeItem("cart");
+    alert("Done");
+  };
   get totalQuantity() {
     let total = 0;
     this.items.forEach((item) => (total += item.quantity));

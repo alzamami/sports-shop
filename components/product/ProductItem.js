@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Image, Text } from "react-native";
-import { List, Button } from "native-base";
+import { List, Button, View } from "native-base";
 import NumericInput from "react-native-numeric-input";
 import cartStore from "../../stores/cartStore";
 
@@ -18,6 +18,7 @@ const ProductItem = ({ product }) => {
         style={{ width: 100, height: 100 }}
       />
       <Text> {product.name}</Text>
+      {/* <Text> {product.name}</Text> */}
       <NumericInput
         rounded
         totalWidth={100}
